@@ -10,4 +10,8 @@ public class Regexp {
         Matcher matcher = pattern.matcher(str);
         return matcher.find();
     }
+    public static boolean MAC(String str) {
+        String MACPattern = "^((\\p{XDigit}{2}([:-]|$)){6})$";
+        return  Pattern.matches(MACPattern, str);
+    }
 }
