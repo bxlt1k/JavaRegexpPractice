@@ -12,6 +12,10 @@ public class Regexp {
     }
     public static boolean MAC(String str) {
         String MACPattern = "^((\\p{XDigit}{2}([:-]|$)){6})$";
-        return  Pattern.matches(MACPattern, str);
+        return Pattern.matches(MACPattern, str);
+    }
+    public static boolean email(String str) {
+        String MACPattern = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+        return Pattern.matches(MACPattern, str);
     }
 }

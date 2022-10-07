@@ -21,7 +21,7 @@ public class EmailPatternTest {
     }
     @Test
     public void fourthFalse() {
-        assertFalse(Regexp.email("Just Text2"));
+        assertFalse(Regexp.email(".@somewhere.com"));
     }
     @Test
     public void fifthFalse() {
@@ -50,10 +50,10 @@ public class EmailPatternTest {
     }
     @Test
     public void fifthTrue() {
-        assertTrue(Regexp.email("\"Joe\\\\Blow\"@example.com"));
+        assertTrue(Regexp.email("john@192.168.1.10"));
     }
     @Test
     public void sixthTrue() {
-        assertTrue(Regexp.email("\"Fred Bloggs\"@example.com\n"));
+        assertTrue(Regexp.email("john.foo+label@somewhere.com"));
     }
 }
