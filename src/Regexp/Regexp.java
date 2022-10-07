@@ -18,4 +18,8 @@ public class Regexp {
         String emailPattern = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
         return Pattern.matches(emailPattern, str);
     }
+    static public boolean password(String str) {
+        String passwordPattern = "(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])\\w{8,}";
+        return Pattern.matches(passwordPattern, str);
+    }
 }
